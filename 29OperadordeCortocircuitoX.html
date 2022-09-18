@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        /*Cortocircuito OR- cuando el valor de la izquierda
+        en la expresión siempre pueda validar a true, es el
+        valor que se cargará por defecto
+        
+        Cortocircuito AND-cuando el valor de la izquierda
+        en la expresión siempre pueda validar a false, es el
+        valor que se cargará por defecto*/
+
+        function saludar(nombre)
+        {
+            nombre=nombre||"Desconocido"
+            console.log(`Hola ${nombre}`);
+        }
+        saludar();
+        saludar("Jon");
+        //truthly
+        console.log("cadena"||"derecha");
+        console.log(19||"derecha");
+        console.log({}||"derecha");
+        console.log([]||"derecha");
+        //falsy
+        console.log(false||"derecha");
+        console.log(null||"derecha");
+        console.log(undefined||"derecha");
+        console.log(""||"derecha");
+        console.log(-2||"derecha");
+        console.log(0||"derecha");
+
+        //truthly
+        console.log("cadena"&&"derecha");
+        console.log(19&&"derecha");
+        console.log({}&&"derecha");
+        console.log([]&&"derecha");
+        //falsy
+        console.log(false&&"derecha");
+        console.log(null&&"derecha");
+        console.log(undefined&&"derecha");
+        console.log(""&&"derecha");
+        console.log(-2&&"derecha");
+        console.log(0&&"derecha");
+
+
+    </script>
+    
+</body>
+</html>

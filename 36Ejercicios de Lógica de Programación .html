@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const invertirCadena=(cadena="")=>
+        (!cadena)
+            ?console.warn("no ingresa cadena")
+            /*
+            split, divide cada palabra por "" espacios y los pone en una lsita,
+            join,  agregar todos los valores en una misma cadena
+            */
+            : console.info(cadena.split("").reverse().join(""));
+        /*invertirCadena();
+        invertirCadena("Hola mundo");        
+        invertirCadena(`Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique architecto dolore
+        quisquam minima. Velit, facere. lusto expedita saepe possimus. Nobis fugit quasi cumque placeat vero
+        nam aut iure suscipit? Dolore`);*/
+
+        const textoEnCadena=(cadena="",texto="")=>
+        {
+            if(!cadena) return console.warn("No ingresaste texto largo");
+            if(!texto) return console.warn("No ingresaste paalbra a evaluar");
+
+            let i = 0 ,
+                contador=0;
+            
+            while(i!==-1)
+            {
+                i=cadena.indexOf(texto,i);
+                if(i!==-1)
+                {
+                    i++;
+                    contador++;
+                }
+            }
+            return console.info(`la variable ${texto} se repite ${contador} veces`)
+
+        }
+
+        /*textoEnCadena();
+        textoEnCadena("hola mundo");
+        textoEnCadena("hola mundo adios mundo","mundo");
+        textoEnCadena("hola mundo adios mundo yolo mundo holi mundo"," mundo");*/
+
+        const palindromo=(palabra="")=>
+        {
+            if(!palabra)return console.warn("no ingreso palabra");
+            palabra=palabra.toLocaleLowerCase();
+            let alReves=palabra.split("").reverse().join("");
+
+            return(palabra===alReves)
+                ?console.info(`si es palindromo, ${palabra}, ${alReves}`)
+                :console.info(`no es palindromo, ${palabra}, ${alReves}`)
+        }
+        palindromo();
+        palindromo("Hola mundo");
+        palindromo("salaS");
+
+        const eliminarCaracteres=(texto="",patron="")=>
+        (!texto)
+         ?console.warn("no ingreso texto")
+         :(!patron)
+          ?console.warn("no ingreso patron de caracteres") 
+          :console.info(texto.replace(new RegExp(patron,"ig"),""));
+
+        eliminarCaracteres();
+        eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5");
+        eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
+        eliminarCaracteres(`Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur commodi
+        ratione fugit qui, dolore quos deserunt iusto veritatis reiciendis quam. Delectus iure voluptatum
+        officia cupiditate voluptas voluptate corrupti, officiis perferendis!`, "[a-z]");
+    </script>
+    
+</body>
+</html>

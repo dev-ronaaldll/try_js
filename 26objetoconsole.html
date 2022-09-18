@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        console.log(console);
+        console.error("esto es un error");
+        console.warn("aviso");
+        console.info("info");
+
+        let nombre="jon",
+         apellido="micha",
+         edad = 35;
+        
+        console.log(nombre);
+        console.log(apellido);
+        console.log(edad);
+        console.log(`Hola mi nombre es ${nombre}`);
+        //%s strinf %d digito
+        console.log(`Hola mi nombre es %s y %d`,nombre,edad);
+
+        console.clear();
+        
+        console.log(window);
+        console.log(document);
+        console.dir(window);
+        console.dir(document);
+        
+        console.clear();
+
+        console.group("Cursos de @nir en youtube");
+        console.log("JavaScript");
+        console.log("NOde.js");
+        console.log("PWAs");
+        console.log("Diseo y Programacion");
+        console.groupEnd
+
+        console.clear();
+
+        /*console.groupCollapsed("Cursos de @nir en youtube");
+        console.log("JavaScript");
+        console.log("NOde.js");
+        console.log("PWAs");
+        console.log("Diseo y Programacion");
+        console.groupEnd*/
+
+        console.log(console);
+        console.table(Object.entries(console));
+        console.table(Object.entries(console).sort()); //ordenar abcdef
+
+        const numeros = [1, 2, 3, 4, 5],
+         vocales = ["a", "e", "i", "o", "u"];
+               
+        console.table(numeros);
+        console.table(vocales);
+
+        const perro = 
+        {
+         nombre: "Boni",
+         raza: "Boxer",
+         color: "cafe"
+        }
+        console.table(perro);
+
+        console.time("cuando tiempo tarda micodigfo")
+        const arreglo=Array(1000000);
+
+        for(let i=0;i<arreglo.length;i++)
+        {
+            arreglo[i]=i;
+        }
+
+        console.timeEnd("cuando tiempo tarda micodigfo");
+
+        console.clear();
+
+        for(let i =0;i<=100;i++)
+        {
+            console.count("codigo for");
+            console.log(i);
+        }
+
+        console.clear();
+
+        let x =3,
+         y=2,
+         pruebaXY="Se espera que X siempre sea menor que Y";
+        console.assert(x<y,{x,y,pruebaXY});
+         
+
+                
+
+    </script>
+
+</body>
+</html>

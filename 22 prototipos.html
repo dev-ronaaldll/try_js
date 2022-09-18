@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*const animal = {
+         nombre: "Snoopy",
+         sonar() {
+          console.log("Hago sonidos por que estoy vivo");
+         }
+        }
+        console.log(animal);
+        
+        const animal1 = {
+         nombre: "Lola Bunny",
+         sonar() {
+          console.log("Hago sonidos por que estoy vivo");
+         }
+        }
+        console.log(animal1);*/
+
+        //VERSION 1 
+        //Función constructora
+        function Animal(nombre, genero) {
+         //Atributos
+         this.nombre = nombre;
+         this.genero = genero; 
+         //Métodos
+         this.sonar = function () {
+          console.log("Hago sonidos por que estoy vivo");
+         }
+        }
+        const snoopy = new Animal("Snoopy", "Macho"),
+         lolaBunny = new Animal("Lola Bunny", "Hembra");
+
+        console.log(snoopy);
+        console.log(lolaBunny);
+
+        function Animal1(nombre, genero) {
+         //Atributos
+         this.nombre = nombre;
+         this.genero = genero;          
+        }
+        //Métodos
+        Animal1.prototype.sonar = function () 
+        {
+          console.log("Hago sonidos por que estoy vivo");
+        }
+
+        const snoopy1 = new Animal1("Snoopy1", "Macho"),
+         lolaBunny1 = new Animal1("Lola Bunny1", "Hembra");
+
+        console.log(snoopy1);
+        console.log(snoopy1.sonar());
+        console.log(lolaBunny1);
+
+    </script>    
+</body>
+</html>

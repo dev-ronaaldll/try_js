@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hola</h1>
+    <script>
+       const a =[];
+       const b=[1,true,"hola",["A","b","c"]];
+
+       console.log(a) ;
+       console.log(b) ;
+       console.log(b[3],b[3][2]) ;       
+       console.log(b.length) ;
+
+       const c =Array.of("X","y","z",9,8,7);
+       console.log(c);
+
+       const d = Array(100).fill(false);
+       console.log(d);
+
+       const colores =["tjoj","verde","cafe"];
+       console.log(colores);
+
+       colores.push("Ngero");
+       console.log(colores);
+
+       colores.pop;
+       console.log(colores);
+       
+       // recorrido de colores dando el string y el index
+       colores.forEach(function(index,el){console.log(`<li id="${index}">${el}</li>`)});
+
+
+    </script>
+</body>
+</html>

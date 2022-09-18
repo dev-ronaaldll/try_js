@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js
+
+        //funcion anonima autoejecutable
+        //si poner ;
+        (function()
+        {
+            console.log("miprimer IIFE funcion anonima autopejecutalbe")
+        }
+        )();
+        // o
+        //alert("Hola");
+
+        //tambien
+      /*(----alert---)("Hola")
+        alert         ("Hola")
+      */
+      (function(d,w,c)
+        {
+            console.log("segundo iife");
+            console.log(d);
+            console.log(w);
+            c.log("este es mi ocnsooe.log");
+        }
+        )(document,window,console);
+
+        //Formas de escribir las funciones Anónimas Autoejecutables
+        
+        //Clásica
+        (function () 
+        {
+          console.log('versión Clásica');
+        })();
+        //La Crockford (JavaScript The Good Parts!
+        ((function ()
+        {
+         console.log('versión Crockford');
+        })());
+        //Unaria
+        +function ()
+        {
+         console.log('versión Unaria');
+        }();
+        //Facebook
+        !function () {
+         console.log('versión Facebook');
+        }();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=Ddevice-width,initial-scale=1.0">
+ <title>Fundamentos JavaScript</title>
+</head>
+
+<body>
+ <h1>Fundamentos JavaScript</h1>
+
+ <script>
+  
+  // global
+  var hola ="Hola Mundo";   
+  console.log(hola);
+
+  // local
+  let hello ="Hello Word"; 
+  console.log(hello);
+
+  const PI=3.14159265;
+  console.log(PI)
+
+  //const NUEVE; // error
+
+  let a;
+
+  a="kenai";
+  console.log(a)
+
+  const objeto={ //let-const
+
+    nombre:"jon",
+    edad:35
+
+  }
+
+  const colores =["blanco","negro","azul"]; //let-const
+
+  console.log(objeto)
+  console.log(colores)
+
+  objeto.correo="jonmircha@gmail.com"
+  colores.push("anaranjado")
+
+  console.log(objeto)
+  console.log(colores)  
+
+  //Cadenas de Texto 
+
+  let nombre="jon";
+  let apellido="mircha";
+  let saludo=new String("Hola Mundo");
+  let lorem= "        dolorum. Adipisci sequi, voluptatesaccusamus earumagnam non pariatur, oditconsequuntur dicta modi. Quam solutaal, iquid nam ea quod dolore.  ";
+
+  console.log(nombre,apellido,saludo);
+  console.log(
+      nombre.length,
+      apellido.length,
+      saludo.length,
+      nombre.toUpperCase(),
+      nombre.toLowerCase(), 
+      lorem.includes("non"),
+      lorem.includes("jon"),
+      lorem,
+      lorem.trim(), // quita espacios innecesarios
+      lorem.split(" "), //genera un arreglo con cada "espacio" ",coma"
+      lorem.split(",")
+  )
+
+  let nombre1 ="jonh";
+  let apellido1="mirchar";
+  //concatenacion
+  //let saludo ="hola mi nopmbre es"+nombre+" "+apellido ;
+  //interpolacion
+
+  let saludo2= "Hola mi nombre es ${nombre}";
+
+ </script>
+
+</body>
+
+</html>

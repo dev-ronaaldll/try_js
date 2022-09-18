@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try
+        {
+            console.log("try :agrega codigo a evaluar");
+            noExiste;
+            console.log("segundo mensaje de try");
+        }
+        catch(error)
+        {
+            console.log("catch: captura cualquier error que gebnere try");
+            console.log("ERROR: "+error);
+        }
+        finally
+        {
+            console.log("finally: se ejecutara siempre al final de un blopque try catch");
+        }
+        console.log("*************************************");
+        
+        try 
+        {
+            let numero=1;
+            if(isNaN(numero))
+            {
+                
+                throw new Error("El caracer introducido no es un Numero")
+            }
+            console.log("a");
+        } catch (error)         
+        {
+            console.log(`se proujo el siguiente error: ${error}`);
+        }
+
+    </script>
+</body>
+</html>

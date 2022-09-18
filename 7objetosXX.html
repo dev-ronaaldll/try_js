@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let a=new String("Hola")
+        //console.log(a)
+
+        const b ={}
+        //console.log(b)
+
+        const jon=
+        {
+            nombre:"jon",
+            apellido:"michar",
+            edad:35,
+            pasatiempos:["correr","gym","darclases"],
+            soltero:false,
+            contacto:
+            {
+                email:"jon@gmail.com",
+                twiter:"@jon",
+                movil:"+523131313"
+            },
+            saludar:function()
+            {
+                console.log(`Hola:)`);
+            },            
+            decirMiNombre:function()
+            {
+                console.log(`Hola me llamo ${this.nombre}
+                ${this.apellido} y tengo ${this.edad} años
+                y me peudes seguir copmo ${this.contacto.twiter}`)
+            }
+        }
+
+        console.log(jon);
+        console.log(jon["nombre"]);
+        console.log(jon["apellido"]);
+        console.log(jon.nombre);
+        console.log(jon.apellido);
+        console.log(jon.soltero);
+        console.log(jon.pasatiempos[1]);
+        console.log(jon.contacto);
+        console.log(jon.contacto.twiter);        
+        jon.saludar();
+        jon.decirMiNombre()
+
+        console.log(Object.keys(jon))
+        console.log(Object.values(jon))
+        console.log(jon.hasOwnProperty("nombre"))
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

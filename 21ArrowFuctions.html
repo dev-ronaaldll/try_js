@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const saludar1=function()
+        {
+            console.log("hola");
+        }
+        const saludar2=()=>
+        {
+            console.log("hola");
+        }
+
+        const saludar3=()=> console.log("hola");
+        const saludar=(nombre)=> console.log(`hola ${nombre}`);
+        saludar("irma");
+
+        const sumar=(a,b)=>a+b;
+        console.log(sumar(5,5));
+
+        const functionDeVariasLineas=()=>
+        {
+            console.log("uno")
+            console.log("dos")
+            console.log("tres")
+        }
+        functionDeVariasLineas();
+
+        const numeros=[1,2,3,4,5];
+
+        numeros.forEach((el, index)=> console.log(`${el} esta en la posicion ${index}`));
+
+       /* function Perro()
+        {
+            console.log(this);
+        }
+
+        Perro();*/
+
+        const perro=
+        {
+            nombre:"nekai",
+            ladrar:function()
+            {
+                console.log(this);
+            }
+        }
+        perro.ladrar();
+
+        const perro1=
+        {
+            nombre:"nekai",
+            ladrar:()=>
+            {
+                console.log(this);
+            }
+        }
+        perro1.ladrar();
+
+        
+        
+    </script>
+</body>
+</html>

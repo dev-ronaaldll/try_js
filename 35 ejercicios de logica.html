@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const contarCaracteres = (cadena = "") =>
+         (!cadena)
+         ? console.warn(`No ingresaste ninguna cadena`) 
+         : console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`);        
+        //contarCaracteres();
+        //contarCaracteres("Hola Mundo");
+
+       const recortarTexto = (cadena = "", longitud = undefined) =>
+         (!cadena)
+         ? console.warn("No ingresaste una cadena de texto")
+         :(longitud===undefined)
+         ? console.warn("No ingresaste una cadena de texto")
+         : console.info(cadena.slice(0, longitud));
+        
+        /*recortarTexto("Hola Mundo", 4);
+        recortarTexto();
+        recortarTexto("Hola Hola", 4);
+        recortarTexto("", 5);*/
+
+        const cadenaAArreglo=(cadena="",separador=undefined)=>
+            (!cadena)
+                ? console.warn("No ingreso cadena de texto")
+                :(separador===undefined)
+                    ?console.warn("No ingresaste caracter separador")
+                    :console.info(cadena.split(separador));
+        /*cadenaAArreglo(`Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique architecto dolore
+        quisquam minima. Velit, facere. lusto expedita saepe possimus. Nobis fugit quasi cumque placeat vero
+        nam aut iure suscipit? Dolore.`, " ");*/
+        //cadenaAArreglo("ene,feb,mar,abr,may,jun,jul,ago,sep,oct,nov,dic",",")
+        //cadenaAArreglo()
+        //cadenaAArreglo("")
+        
+        const repetirTexto=(texto="",veces=undefined)=>
+        {
+            if(!texto) return console.warn("no ingreso texto");
+            if(veces===undefined) return console.warn("no ingreso repetciones ");
+            if(veces===0) return console.warn("ingreasr numero mayor a 0");
+            //if(veces<0) return console.warm("no ingreso repetciones ");
+            if(Math.sign(veces)===-1) return console.warn("no puede ser negativo");
+
+            for(let i=1;i<=veces;i++) console.info(`${texto},${i}`);            
+            
+        }
+
+        repetirTexto("Hola Mundo", 3);
+        repetirTexto("Hola Mundo", 0);
+        repetirTexto("Hola Mundo", -20);
+        repetirTexto("hola mundo", 20);
+        //repetirTexto("Hola Mundo",);
+
+    </script>
+</body>
+</html>

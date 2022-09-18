@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+    <script>
+        
+        //https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular
+        //expresion regular para validar cooreo
+        //expresion regular para dni español
+        //expresiones regulares mas utilizadas
+
+        let cadena =`Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Voluptatem fuga cupiditate dolores
+            saepe, praesentium sit eaque recusandae id sapiente
+            similique, laudantium voluptatum perferendis ea iure ad
+            odio doloremque earum3 voluptate.`;
+
+            /*:banderas
+                g:global: busca todas la coincidencias
+                i:ignora mayudsculas minusculas
+                \d numeros
+            */
+
+        //lo mismo
+        let expReg=new RegExp("lorem","ig");
+        //lo mismo
+        //let expReg2=/lorem/ig;
+        //let expReg2=/\d/ig;
+        //let expReg2=/[0-9]/ig;
+            //{1} almenos uuna vez
+            //{1,3} de una a tres veces
+            //{1,} de una a indefiniido
+        let expReg2=/lorem{1}/ig;
+        
+        //verdareo falso
+        //console.log(expReg.test(cadena));
+        // da mas infomraicon de lo encontrado
+        //console.log(expReg.exec(cadena));
+        
+        console.log(expReg2.exec(cadena));
+        console.log(expReg2.test(cadena));
+
+    </script>
+    </body>
+</html>

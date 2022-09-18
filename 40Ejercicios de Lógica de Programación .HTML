@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const contarLetras = (cadena = "") =>
+        {            
+            if (!cadena) return console.warn("No ingresaste una cadena de texto");
+            if (typeof cadena !== "string") return console.error(`El valor "${cadena}" ingresado, NO es una
+            cadena de texto`);
+
+            let vocales = 0,
+             consonantes = 0;
+            cadena = cadena.toLocaleLowerCase();
+            for (let letra of cadena) 
+            {
+             if (/[aeiouáéíóúü]/.test(letra)) vocales++;
+             if (/[bcdfghjklmnñpqrstvwxyz]/.test(letra)) consonantes++;
+            }
+            return console.info(
+             {
+             cadena,
+             vocales,
+             consonantes
+             }
+            )
+        }
+
+        /*contarLetras();
+        contarLetras(3);
+        contarLetras("hola mundo");
+        contarLetras(`Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur commodi
+        ratione fugit qui, dolore quos deserunt iusto veritatis reiciendis quam. Delectus iure voluptatum
+        officia cupiditate voluptas voluptate corrupti, officiis perferendis!`);*/
+        const validarNombre = (nombre = "") =>
+        {
+            if (!nombre) return console.warn("No ingresaste un nombre");
+            if (typeof nombre !== "string") return console.error(`El valor "${nombre}" ingresado, NO es una
+            cadena de texto`);
+            /*g. : es para validar cada caracter*/
+            let expReg = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜs]+$/g.test(nombre);
+
+            return(expReg)
+             ?console.info(`"${nombre}" es un nombre valido`)
+             :console.info(`"${nombre}" NO es un nombre valido`)
+        }
+
+        /*validarNombre();
+        validarNombre(3);
+        validarNombre("ronald");
+        validarNombre("ronald,3");*/
+        const validarEmail= (email = "") =>
+        {
+            if (!email) return console.warn("No ingresaste un email");
+            if (typeof email !== "string") return console.error(`El valor "${email}" ingresado, NO es una
+            cadena de texto`);
+            //expresion regul,ar para validar emails
+            let expReg =  /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(email);
+
+            return(expReg)
+             ?console.info(`"${email}" es un email valido`)
+             :console.info(`"${email}" NO es un email valido`)            
+        }
+
+        validarEmail();
+        validarEmail(34)
+        validarEmail("jon,mir,cha@gmail");
+        validarEmail("jonmircha@gmail.com");
+        
+         
+
+
+    </script>
+</body>
+</html>

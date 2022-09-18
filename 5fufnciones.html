@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+
+    <h1>Fundamentos JavaScript</h1>
+
+    
+    <script>
+    function estoEsUnaFuncion()
+    {
+        console.log("Uno")
+        console.log("Dos")
+        console.log("Tres")
+    }
+    //estoEsUnaFuncion();
+
+    function unaFuncionQUeDevuelveValor()
+    {
+        console.log("Uno");
+        console.log("Dos");
+        console.log("Tres");
+        return"la funcion ha retornado una danea de texto";
+    }
+    //unaFuncionQUeDevuelveValor();
+
+    //let valorDeFuncion=unaFuncionQUeDevuelveValor();
+    //console.log("valor : "+valorDeFuncion)
+
+    function saludar(nombre,edad){
+        console.log(`hola mi nombre es ${nombre} y tengo ${edad}`)        
+    }
+
+    saludar("kenai",7)
+
+    saludar();//undefined
+    
+    funcionDeclarada();    //??
+    //Fuinciones declaradas vs funciones expresadas
+    function funcionDeclarada()
+    {
+        console.log("esto es una fucniona xzzzxzxzxzxzzzzzzzzz")
+    }
+    funcionDeclarada();
+    
+    // funcion anonima asignada a una variable
+    funcionExpresada();
+    const funcionExpresada1= ()=>{} //proximamente
+    const funcionExpresada=function()
+    {
+        console.log("zzzzzzzz");
+    }
+
+    funcionExpresada();
+    
+    </script>
+    
+</body>
+</html>
